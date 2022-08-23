@@ -1,4 +1,4 @@
-name: "Daya GCR"
+name: "gcr-upload-action"
 description: "Push a docker image to Google Cloud Container Registry"
 
 branding:
