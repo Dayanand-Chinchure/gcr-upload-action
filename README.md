@@ -15,9 +15,9 @@ or use a tool like [Terraform](https://www.terraform.io).
 
 | Variable                         | Description                                                                 |
 |----------------------------------|-----------------------------------------------------------------------------|
-| `creds`                          | ***Required*** Service Account JSON Key (not base64 encoded)                |
-| `src`                            | ***Required*** Source Image                                                 |
-| `dst`                            | ***Required*** Destination Image                                            |
+| `service_account`                          | ***Required*** Service Account JSON Key (not base64 encoded)                |
+| `source_image`                            | ***Required*** Source Image                                                 |
+| `destination_image`                            | ***Required*** Destination Image                                            |
 | `registry`                       |  Registry host name (must match destination image), default: "gcr.io"       |
 
 
