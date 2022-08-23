@@ -20,7 +20,7 @@ Github action to push a docker image to GCR
 ## Example Usage
 
 ```
-uses: dchinchure/gcr-upload-action@1.3
+uses: dchinchure/gcr-upload-action@1.2
 with:
   service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
   source_image: local-image:tag
