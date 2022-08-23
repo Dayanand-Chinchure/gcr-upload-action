@@ -1,13 +1,9 @@
-# Google Cloud Container Registry Docker Push
+# GCR Docker Push
 
-Github action to push a docker image to [Google Cloud's Container Registry](https://cloud.google.com/container-registry). 
+Github action to push a docker image to GCR
 
 ## Prerequisites
 
-Set up the following resources manually in the Cloud Console 
-or use a tool like [Terraform](https://www.terraform.io).
-
-* Enable Container Registry API
 * Create Service Account with Role `Storage Admin` and export a new JSON key.
 
 
