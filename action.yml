@@ -1,6 +1,10 @@
 name: "gcr-upload-action"
 description: "Push a docker image to Google Cloud Container Registry"
 
+branding:
+  icon: "box"
+  color: "purple"
+  
 inputs:
   service_account:
     description: "Contents of a Service Account JSON Key"
