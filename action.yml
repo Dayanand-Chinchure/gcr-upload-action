@@ -1,0 +1,32 @@
+name: "Google Cloud Container Registry"
+description: "Push a docker image to Google Cloud Container Registry"
+
+branding:
+  icon: "upload-cloud"
+  color: "red"
+
+inputs:
+  service_account:
+    description: "Contents of a Service Account JSON Key"
+    required: true
+  registry:
+    description: "Registry host name (must match dst image)" 
+    required: false
+    default: "gcr.io"
+  source_image:
+    description: "Source image name"
+    required: true
+  destination_image:
+    description: "Destination image name"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Push to Google Cloud Container Registry
+      shell: bash
+      run: |
+        docker login -u _json_key -p '${{ inputs.service_account }}' 'https://${{ inputs.registry }}' 2>/dev/null
+        docker tag '${{ inputs.source_image }}' '${{ inputs.destination_image }}'
+        docker push '${{ inputs.destination_image }}'
+        echo "Successfully pushed ${{ inputs.source_image }} to ${{ inputs.destination_image }}"
